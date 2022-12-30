@@ -1,0 +1,10 @@
+第一种MyBatis框架的使用
+
+Dao接口用于定义操作数据库的方法
+mapper文件必须和Dao接口同名,且在同一个包下
+      1.mapper文件的namespace是Dao接口的全限定名称,resultType是返回的查询数据库结果的数据类型
+      2.在mapper文件中定义sql语句,sql语句的id是Dao接口中的方法名,parameterType是方法的参数类型
+MyBatis的主配置文件,用于指定数据库的相关信息，以及指定mapper.xml文件的全限定名称,编译后target/class目录下必须要有主配置文件,没有的话可以复制过去
+
+
+

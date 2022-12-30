@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.liuyong</groupId>
+    <artifactId>MyBatis-Use</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<dependencies>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+        <scope>test</scope>
+    </dependency>
+    <!--mybatis依赖-->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>3.5.9</version>
+    </dependency>
+    <!--mysql驱动,注意版本-->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.28</version>
+    </dependency>
+</dependencies>
+    <build>
+        <!--配置编译插件-->
+        <plugins>
+            <plugin>
+                <!--插件的坐标-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId><!--插件的名称-->
+                <version>3.1</version><!--插件的版本-->
+                <!--配置插件的信息-->
+                <configuration>
+                    <!--告诉maven使用的jdk版本编译的-->
+                    <source>1.8</source>
+                    <!--程序应该运行在jdk1.8版本上的版本-->
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <!--把sql映射文件拷贝到target/classes目录中-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory><!--所在的目录-->
+                <includes><!--包括目录下的.properties,.xml 文件都会扫描到-->
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+
+</project>
