@@ -1,0 +1,2 @@
+mapper.xml文件的sql语句的标签的id必须和mapper接口的方法名一致
+在主函数中可以通过spring容器获取mapper接口的代理对象，然后调用代理对象的方法，就可以执行sql语句了

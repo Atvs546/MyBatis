@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace的值为接口在target/calsses目录下的相对目录-->
+<mapper namespace="com.Dao.Dao3.StudentDao3">
+    <!--
+       select:表示查询操作。
+       id: 你要执行的sql语法的唯一标识， mybatis会使用这个id的值来找到要执行的sql语句
+           可以自定义，但是要求你使用接口中的方法名称。
+
+       resultType:表示结果类型的， 是sql语句执行后得到ResultSet,遍历这个ResultSet得到java对象的类型。值是这个类在target/classes目录下的相对路径
+
+    -->
+    <select id="selectstudents3" resultType="com.model.Student" >
+        select id,name,email,age from student order by id
+    </select>
+</mapper>

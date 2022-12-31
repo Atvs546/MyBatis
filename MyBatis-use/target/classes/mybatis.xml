@@ -62,6 +62,8 @@
            从类路径开始的路径信息。  target/clasess(类路径)的相对路径
         -->
         <mapper resource="com/Dao/Dao1/StudnetDao1.xml"/>
+        <mapper resource="com/Dao/Dao2/StudentDao2.xml"/>
+        <mapper resource="com/Dao/Dao3/StudentDao3.xml"/>
         <!--<mapper resource="com/bjpowernode/dao/SchoolDao.xml" />-->
     </mappers>
 </configuration>
